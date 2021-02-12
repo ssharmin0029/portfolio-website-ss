@@ -7,7 +7,9 @@
 body {
     background-color:rgb(255, 250, 250);
 }
-
+/* --------------------------------------- */
+/* Main header code and navigation here */
+/* --------------------------------------- */
 .main-header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -19,6 +21,7 @@ h1 {
     font-size: 30px;
 }
 
+/* Makes the nav element (within class="main-header") a felxbox to justify the content */
 .main-header nav {
     display: flex;
     justify-content: flex-end;
@@ -27,11 +30,12 @@ h1 {
     font-size: 20px;
 }
 
+/* Makes the ul element (within nav --> class="main-header") a felxbox to justify the content */
 .main-header nav ul {
     width: 20%;
     display: flex;
     justify-content: space-between;
-    /* margin-left: 25px;   */
+    margin-left: 25px;  
 }
 
 a {
@@ -39,6 +43,7 @@ a {
     text-decoration: none;
 }
 
+ /* Background image --> goes with the header */
 .hero-image {
     height: 140px;
     width: 100%;
@@ -46,8 +51,14 @@ a {
     background-size: cover;
     background-position: center;
 }
+/* --------------------------------------- */
+/* CODE ENDS */
+/* --------------------------------------- */
 
 /* --------------------------------------- */
+/* Main Content code here */
+/* --------------------------------------- */
+
 main.content {
     width: 100%;
     margin-top: 20px;
