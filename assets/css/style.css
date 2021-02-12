@@ -8,29 +8,30 @@ body {
     background-color:rgb(255, 250, 250);
 }
 
-header {
+.main-header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(122, 129, 134);
     color: rgba(214, 229, 236, 0.781); 
 }
 h1 {
-    display: inline-block;
     margin-left: 20px;
     font-size: 30px;
 }
 
-header nav {
-    padding-top: 15px;
+.main-header nav {
+    display: flex;
+    justify-content: flex-end;
     margin-right: 25px;
-    float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px; 
+.main-header nav ul {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 25px;   */
 }
 
 a {
@@ -39,7 +40,7 @@ a {
 }
 
 .hero-image {
-    height: 150px;
+    height: 140px;
     width: 100%;
     background-image: url("../images/heading-background.jpg");
     background-size: cover;
@@ -47,3 +48,60 @@ a {
 }
 
 /* --------------------------------------- */
+main.content {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px; 
+    display: inline-block;
+    border: 5px dashed green;
+}
+#content-about {
+    display: flex;
+    flex-direction: row;
+}
+
+aside.side-label-section {
+    padding: 20px; 
+    width: 20%;
+    /* float: left; */
+    margin-right: 20px;
+    margin bottom: 20px;
+    border: 15px dashed yellow;
+    border-right: 2px solid blue;
+    height: 300px;
+}
+
+.side-label-text {
+    font-size: 30px;
+    float: right;
+    background-color: red;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.project-section {
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+.project-container {
+    width: 80%;
+    background-color: palevioletred;
+    display: flex;
+    flex: row;
+    margin: 20px;
+}
+
+.project-image1 {
+    height: 120px;
+    width: 100%;
+    background-image: url("../images/project1-image.jpg");
+    background-size: cover;
+    background-position: center;
+}
