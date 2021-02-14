@@ -1,3 +1,11 @@
+/* CSS Variables */
+:root {
+    --header-txt-color: rgb(224, 255, 255);
+    --txt-color: rgb(51, 100, 145);
+    --title-bg-color:  rgb(14, 53, 88);
+    --txt-font-fam: sans-serif;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,9 +13,9 @@
 }
 
 body {
+    border-style: groove;
+    border-color: rgb(114, 162, 179);
     background-color:rgb(255, 250, 250);
-    /* border-style: groove;
-    border-color: rgb(114, 162, 179); */
 }
 
 /* --------------------------------------- */
@@ -17,9 +25,10 @@ body {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(122, 129, 134);
-    color: rgba(214, 229, 236, 0.781); 
+    color: rgb(214, 229, 236, 0.781); 
 }
-h1 {
+
+.main-header h1 {
     margin-left: 20px;
     font-size: 30px;
 }
@@ -35,15 +44,15 @@ h1 {
 
 /* Makes the ul element (within nav --> class="main-header") a felxbox to justify the content */
 .main-header nav ul {
-    width: 20%;
     display: flex;
     justify-content: space-between;
     margin-left: 25px;  
+    width: 20%;
 }
 
 /* Only applies to links inside the navbar --> header */
 .main-header nav ul li a {
-    color: rgb(224, 255, 255);
+    color: var(--header-txt-color);
     text-decoration: none;
 }
 
@@ -87,13 +96,12 @@ aside.side-label-section {
     margin-right: 20px;
     border-right: 2px solid rgb(46, 124, 189);
     width: 45%;
-    height: 280px;
 }
 
 /* h2 element with class="side-label-text" is a child of aside element */
 aside .side-label-text {
     font-size: 30px;
-    color: rgb(51, 100, 145);
+    color: var(--txt-color);
 } 
 
 /* --------------------------------------- */
@@ -105,24 +113,29 @@ aside .side-label-text {
     flex-direction: row;
     margin-top: 20px;
 }
+/* height for border-right of aside class="side-label-section" --> id="content-about" */
+#content-about aside.side-label-section {
+    height: 280px;
+}
 
 #content-about .info-section {
     display: flex;
-    /* justify-content: flex-start;  */
+    justify-content: flex-end;
     padding: 0 15px;  
 }
 
 .info-section img {
-    width: 270px;
-    height: 280px;
     padding-right: 10px;
-    margin-right: 20px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 30px;
+    width: 250px;
+    height: 280px;
 }
 
 .info-section p {
     padding-top: 100px;
-    width: 100%; 
+    width: 80%;
+    font-family: var(--txt-font-fam);
 }
 
 /* --------------------------------------- */
@@ -135,138 +148,167 @@ aside .side-label-text {
     margin-top: 20px;
 }
 
+/* height for border-right of aside class="side-label-section" --> id="content-work" */
+#content-work aside.side-label-section {
+    height: 540px;
+}
+
 #content-work .project-section {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: flex-start;  */
     padding: 0 15px; 
 }
 
-.project-section .project-container {
+/* This for the 1st project --> larger than the rest */
+.project-section .project1-container {
     position: relative;
-    width:  395px;
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    /* flex-direction: column; */
-    margin-bottom: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    /* border: 4px solid green; */
-    background-color: yellow;
-} 
-
-
-.project-section .project-container-large {
-    position: relative;
-    width: 800px;
-    height: 260px;
     display: flex;
     justify-content: flex-end;
-    /* flex-direction: column; */
     margin-bottom: 10px;
     margin-left: 5px;
-    /* border: 4px solid green; */
-    background-color: yellow;
-} 
-
-.project-section .project-container-large .project1-image1 {
-    position: absolute;
     width: 800px;
     height: 260px;
+} 
+
+/* 1st project image */
+.project-section .project1-container .project1-image1 {
+    position: absolute;
     background-image: url("../images/project1-image1.jpg");
     background-size: cover;
     background-position: center;
-    /* border: 4px solid red; */
-    background-color: lawngreen;
+    width: 800px;
+    height: 260px;
 }
 
-.project-section .project-container .project2-image2 {
-    position: absolute;
+/* This for the rest of the projects --> smaller than the 1st project */
+.project-section .project-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     width:  395px;
     height: 120px;
+} 
+
+/* 2nd - 4th project images */
+.project-section .project-container .project2-image2 {
+    position: absolute;
     background-image: url("../images/project2-image2.jpg");
     background-size: cover;
     background-position: center;
+    width: 395px;
+    height: 120px;
 }
 
 .project-section .project-container .project3-image3 {
     position: absolute;
-    width: 395px;
-    height: 120px;
     background-image: url("../images/project3-image3.jpg");
     background-size: cover;
     background-position: center;
+    width: 395px;
+    height: 120px;
 }
 
 .project-section .project-container .project4-image4 {
     position: absolute;
-    width:  395px;
-    height: 120px;
     background-image: url("../images/project4-image4.jpg");
     background-size: cover;
     background-position: center;
+    width: 395px;
+    height: 120px;
 }
 
 .project-section .project-container .project5-image5 {
     position: absolute;
-    width: 395px;
-    height: 120px;
     background-image: url("../images/project5-image5.jpg");
     background-size: cover;
     background-position: center;
+    width: 395px;
+    height: 120px;
 }
 
-.project-container-large .project-title-desc {
+/* Description for the 1st project  */
+.project1-container .project1-title-desc {
     position: relative;
-    width: 150px;
+    width: 160px;
     height: 80px;
     top: 160px;   
-    right: 650px;
-    background-color: brown;
+    right: 640px;
+    background-color: var(--title-bg-color);
 }
+
+/* Description for the rest of the projects */
 .project-container .project-title-desc {
     position: relative;
     width: 150px;
     height: 60px;
     top: 40px;   
     left: 0px;
-    background-color: brown;
+    /* background-color: rgb(51, 100, 145); */
+    background-color: var(--title-bg-color);
 }
 
-.project-title-desc h3 {
+/* 1st project -->  h3 */
+.project1-title-desc h3 {
     padding: 10px;
-    margin: 20px;
+    margin-right: 100px;
     width: 200px;
     height: 10px;
-    text-align: center;
+    font-size: 20px;
+    color: var(--header-txt-color);
 }
 
+/* 1st project --> p */
+.project1-title-desc p {
+    padding: 20px;
+    font-size: 15px;
+    color: var(--header-txt-color);
+}
+
+/* Rest of the projects -->  h3 */
+.project-title-desc h3 {
+    padding: 10px;
+    margin-right: 100px;
+    width: 200px;
+    height: 10px;
+    font-size: 15px;
+    color: var(--header-txt-color);
+}
+
+/* Rest of the projects -->  p */
 .project-title-desc p {
-    text-align: center;
-
+    padding: 15px;
+    font-size: 13px;
+    color: var(--header-txt-color);
 }
+
 /* --------------------------------------- */
 /* Main continues... */
 /* main-content --> id="content-contact" code */
 /* --------------------------------------- */
-#content-contact {
+.content #content-contact {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+}
+
+/* height for border-right of aside class="side-label-section" --> id="content-contact" */
+#content-contact aside.side-label-section {
+    height: 80px;
 }
 
 #content-contact .contact-section {
     display: flex;
     justify-content: row;
     padding: 30px 15px;
-    margin-right: 272px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 300px;
+    font-family: var(--txt-font-fam);
     font-size: 20px;
 }
 
 #content-contact .contact-section ul {
-    /* width: 40%; */
     display: flex;
     justify-content:space-between; 
 }
@@ -275,19 +317,39 @@ aside .side-label-text {
     margin-left: 25px; 
 }
 
-
+/* Only applies to links inside the class="contact-section" --> header */
 #content-contact .contact-section ul li a {
     font-weight: bold;
-    color: rgb(51, 100, 145);
+    color: var(--txt-color);
     text-decoration: none;
 }
+
+
+/* --------------------------------------- */
+/* Media Query */
+/* --------------------------------------- */
+/* @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+    .main-header h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .main-header nav ul {
+        width: 100%;
+        display: flex;
+        flex-direction: wrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .main-header nav li {
+        display: flex;
+        justify-content: center;
+    }
+} */
+
+ 
  
 
 
-#content-work aside.side-label-section {
-    height: 540px;
-}
 
-#content-contact aside.side-label-section {
-    height: 80px;
-}
