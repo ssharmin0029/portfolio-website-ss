@@ -193,15 +193,15 @@ aside .side-label-text {
 /* 2nd - 4th project images */
 
 .project-section #project-1 .project-image {
-    background-image: url("../images/project1-image1.jpg");
+    background-image: url("../images/project1-image1.png");
 }
 
 .project-section #project-2 .project-image {
-    background-image: url("../images/project2-image2.jpg");
+    background-image: url("../images/project2-image2.png");
 }
 
 .project-section #project-3 .project-image {
-    background-image: url("../images/project3-image3.jpg");
+    background-image: url("../images/project3-image3.png");
 }
 
 .project-section #project-4 .project-image {
@@ -213,7 +213,23 @@ aside .side-label-text {
 }
 
 .project-section .project-container#project-1 {
-    height: 240px;
+    height: 210px;
+}
+
+.project-section .project-container#project-2 {
+    height: 160px;
+}
+
+.project-section .project-container#project-3 {
+    height: 160px;
+}
+
+.project-section .project-container#project-4 {
+    height: 160px;
+}
+
+.project-section .project-container#project-5 {
+    height: 160px;
 }
 
 /* Description for the 1st project  */
@@ -227,49 +243,59 @@ aside .side-label-text {
 } */
 
 /* Description for the rest of the projects */
-.project-container .project-title-desc {
+.project-section .project-container#project-1 .project-title-desc {
     position: relative;
-    width: 150px;
-    height: 60px;
-    top: 40px;   
-    left: 0px;
-    /* background-color: rgb(51, 100, 145); */
-    background-color: var(--title-bg-color);
+    width: 130px;
+    height: 50px;
+    top: 160px;   
+    left: 265px;
+    background-color: rgb(161, 164, 168);
+    /* background-color: var(--title-bg-color); */
+}
+
+.project-section .project-container .project-title-desc {
+    position: relative;
+    width: 130px;
+    height: 50px;
+    top: 110px;   
+    left: 265px;
+    background-color: rgb(161, 164, 168);
+    /* background-color: var(--title-bg-color); */
 }
 
 /* 1st project -->  h3 */
-.project1-title-desc h3 {
+.project-section .project-container#project-1 .project-title-desc p {
     padding: 10px;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     width: 200px;
-    height: 10px;
-    font-size: 20px;
+    /* height: 10px; */
+    font-size: 13px;
     color: var(--header-txt-color);
 }
 
 /* 1st project --> p */
-.project1-title-desc p {
+/* .project1-title-desc p {
     padding: 20px;
     font-size: 15px;
     color: var(--header-txt-color);
-}
+} */
 
 /* Rest of the projects -->  h3 */
-.project-title-desc h3 {
+.project-section .project-container .project-title-desc p {
     padding: 10px;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     width: 200px;
     height: 10px;
-    font-size: 15px;
+    font-size: 12px;
     color: var(--header-txt-color);
 }
 
 /* Rest of the projects -->  p */
-.project-title-desc p {
+/* .project-title-desc p {
     padding: 15px;
     font-size: 13px;
     color: var(--header-txt-color);
-}
+} */
 
 /* --------------------------------------- */
 /* Main continues... */
